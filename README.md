@@ -22,24 +22,24 @@ Most JS PAKE implementations are tied to a framework, pull in opinionated transp
 ## Install
 
 ```bash
-npm install pake-js
-# or: pnpm add pake-js / yarn add pake-js / bun add pake-js
+npm install @cipherman/pake-js
+# or: pnpm add @cipherman/pake-js / yarn add @cipherman/pake-js / bun add @cipherman/pake-js
 ```
 
 ## Ciphersuites
 
 | Protocol | Suite | Import path |
 | --- | --- | --- |
-| SPAKE2+ (RFC 9383) | `SPAKE2PLUS-P256-SHA256-HKDF-SHA256-HMAC-SHA256` | `pake-js/spake2plus` → `p256` |
-| SPAKE2+ (RFC 9383) | `SPAKE2PLUS-EDWARDS25519-SHA256-HKDF-SHA256-HMAC-SHA256` | `pake-js/spake2plus` → `ed25519` |
-| CPace (draft-20) | `CPACE-RISTR255-SHA512` | `pake-js/cpace` → `ristretto255` |
+| SPAKE2+ (RFC 9383) | `SPAKE2PLUS-P256-SHA256-HKDF-SHA256-HMAC-SHA256` | `@cipherman/pake-js/spake2plus` → `p256` |
+| SPAKE2+ (RFC 9383) | `SPAKE2PLUS-EDWARDS25519-SHA256-HKDF-SHA256-HMAC-SHA256` | `@cipherman/pake-js/spake2plus` → `ed25519` |
+| CPace (draft-20) | `CPACE-RISTR255-SHA512` | `@cipherman/pake-js/cpace` → `ristretto255` |
 
 > The edwards25519 SPAKE2+ suite is marked SPEC-VERIFY: the M, N constants must be cross-checked against RFC 9383 and the appendix test vectors must pass before production use. See [`THREAT_MODEL.md`](./THREAT_MODEL.md) §R2.
 
 ## SPAKE2+ example (P-256 / SHA-256)
 
 ```ts
-import { spake2plus } from "pake-js";
+import { spake2plus } from "@cipherman/pake-js";
 
 // ---- 1. Registration (server-side, one-time) ---------------------------
 // You run your memory-hard function first. pake-js does NOT bundle an MHF —
@@ -91,7 +91,7 @@ if (
 ## CPace example (Ristretto255 / SHA-512)
 
 ```ts
-import { cpace } from "pake-js";
+import { cpace } from "@cipherman/pake-js";
 
 const PRS = await yourMhf(password, { salt });
 const sid = await agreedSessionId(); // 16+ bytes of agreed randomness

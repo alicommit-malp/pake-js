@@ -1,5 +1,5 @@
 {
-  "name": "pake-js",
+  "name": "@cipherman/pake-js",
   "version": "0.1.0",
   "description": "Auditable, standards-based Password-Authenticated Key Exchange (SPAKE2+ / CPace) for Node.js, Deno, Bun, and browsers. Built for regulated environments.",
   "keywords": [
