@@ -1,0 +1,8 @@
+*
+!dist/**
+!README.md
+!SECURITY.md
+!THREAT_MODEL.md
+!CHANGELOG.md
+!LICENSE
+!package.json
