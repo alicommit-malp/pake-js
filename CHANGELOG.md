@@ -13,8 +13,8 @@ All notable changes to this project will be documented here. The format follows 
 - CPace per `draft-irtf-cfrg-cpace-20`:
   - `CPACE-RISTR255-SHA512` — **verified byte-for-byte against draft-20 Appendix B.3** (generator_string, SHA-512 hash, calculate_generator, Ya/Yb public shares, shared secret K, ISK_IR, ISK_SY, scalar_mult_vfy valid/invalid cases).
 - Stateless function-only public API.
-- Universal build (ESM + CJS, Node ≥18, Deno, Bun, browsers) via tsup.
-- CI on Node 18/20/22 with typecheck, lint, tests, bundle size, `npm audit`, CodeQL.
+- Universal build (ESM + CJS, Node ≥22, Deno, Bun, browsers) via tsup.
+- CI on Node 22 with typecheck, lint, tests, bundle size, `npm audit` (runtime deps), CodeQL.
 - Release workflow with npm provenance (SLSA) via GitHub Actions OIDC and CycloneDX SBOM attached to every GitHub release.
 - `SECURITY.md`, `THREAT_MODEL.md`, `CLAUDE.md`.
 

@@ -4,7 +4,7 @@ Auditable, standards-based **Password-Authenticated Key Exchange** for JavaScrip
 
 - **Protocols**: SPAKE2+ (RFC 9383) and CPace (draft-irtf-cfrg-cpace-20)
 - **Runtime dependency**: exactly one — [`@noble/curves`](https://github.com/paulmillr/noble-curves)
-- **Platforms**: Node ≥18, Deno, Bun, and every modern browser (any framework)
+- **Platforms**: Node ≥22, Deno, Bun, and every modern browser (any framework)
 - **API**: fully stateless — plain functions in, plain objects out
 - **License**: MIT
 

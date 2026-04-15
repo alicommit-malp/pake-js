@@ -77,7 +77,7 @@ Accepting the identity element as a peer share degrades SPAKE2+ to zero-entropy 
 
 A silent fallback to `Math.random` on a constrained runtime would be catastrophic.
 
-**Mitigation**: `randomBytes` throws loudly if `globalThis.crypto.getRandomValues` is missing. No fallback. CI runs on Node 18, 20, 22 where WebCrypto is built-in.
+**Mitigation**: `randomBytes` throws loudly if `globalThis.crypto.getRandomValues` is missing. No fallback. CI runs on Node 22 where WebCrypto is built-in.
 
 ### R6 — Supply chain
 
